@@ -1,0 +1,13 @@
+<div class="container">
+  <button (click)="toggleSearch()">
+    <img src="/images/icons/search.png" alt="Search icon" />
+  </button>
+  <input
+    [ngClass]="{ active: searchActive }"
+    name="search"
+    placeholder="Search films and series"
+    [(ngModel)]="searchTerm"
+    autocomplete="off"
+    (input)="onSearch()"
+  />
+</div>

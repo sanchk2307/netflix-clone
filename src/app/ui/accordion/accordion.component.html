@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="header" (click)="onToggle()">
+    <ng-content select=".header" />
+    @if (isExpanded) {
+    <img src="/images/icons/close-slim.png" alt="Close" />
+    } @else {
+    <img src="/images/icons/add.png" alt="Open" />
+    }
+  </div>
+  @if (isExpanded) {
+  <div [class]="isExpanded ? 'body open' : 'body closed'">
+    <span><ng-content select=".body" /></span>
+  </div>
+  }
+</div>

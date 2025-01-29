@@ -1,0 +1,11 @@
+<div class="group">
+  @for (slideItem of slideRows; track slideItem.title) {
+  <div class="container">
+    <p class="title">{{ slideItem.title }}</p>
+    <app-card-entity [slideItem]="slideItem" [category]="category"></app-card-entity>
+  </div>
+  }
+  <app-footer></app-footer>
+</div>
+
+

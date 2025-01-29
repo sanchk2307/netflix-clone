@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.container:last-of-type {
+    margin-bottom: 0;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 24px;
+    color: #e5e5e5;
+    font-weight: bold;
+    margin-left: 56px;
+    margin-right: 56px;
+    margin-top: 0;
+}
+
+@media (max-width: 1000px) {
+    .group .title {
+        margin-left: 30px;
+    }
+}

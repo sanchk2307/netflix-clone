@@ -1,0 +1,65 @@
+<div
+  class="background"
+  [style.background]="
+    bg &&
+    (src
+      ? 'url(/images/misc/' + src + '.jpg)' + 'top left / cover no-repeat'
+      : 'url(/images/misc/home-bg.jpg)' + 'top left / cover no-repeat')
+  "
+>
+  <div class="container">
+    <div class="group">
+      <a class="logo" routerLink="/">
+        <img class="logo" src="/images/icons/logo.svg" alt="Netflix" />
+      </a>
+      @if (isProfileSelected) {
+      <p
+        class="text-link"
+        [ngClass]="{ active: category === 'series' }"
+        (click)="onClickCategory('series')"
+      >
+        Series
+      </p>
+      <p
+        class="text-link"
+        [ngClass]="{ active: category === 'films' }"
+        (click)="onClickCategory('films')"
+      >
+        Films
+      </p>
+      }
+    </div>
+    @if (isProfileSelected) {
+    <div class="group">
+      <app-search (searchEvent)="onSearch($event)" />
+      <div class="profile">
+        <button>
+          <img
+            class="profile-buttom"
+            [src]="'/images/users/' + user.photoURL + '.png'"
+            alt="Profile photo"
+          />
+        </button>
+        <div class="dropdown">
+          <div class="group">
+            <button>
+              <img
+                class="profile-buttom"
+                [src]="'/images/users/' + user.photoURL + '.png'"
+                alt="Profile photo"
+              />
+            </button>
+            <p class="text-link">{{ user.displayName }}</p>
+          </div>
+          <div class="group">
+            <p class="text-link" (click)="onClickSignOut()">Sign Out</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    } @if (!user) {
+    <a class="button-link" routerLink="/signin">Sign In</a>
+    }
+  </div>
+  <ng-content />
+</div>

@@ -1,0 +1,130 @@
+.background {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1000px) {
+    background: none !important;
+  }
+}
+.container {
+  display: flex;
+  margin: 0 56px;
+  height: 64px;
+  padding: 18px 0;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 1000px) {
+    margin: 0 30px;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    position: relative;
+    &:hover > .dropdown {
+      display: flex;
+      flex-direction: column;
+    }
+    button {
+      padding: 0;
+      cursor: pointer;
+      background-size: contain;
+      border: 0;
+      width: 32px;
+      height: 32px;
+
+      img {
+        width: 100%;
+      }
+    }
+    .dropdown {
+      display: none;
+      background-color: black;
+      position: absolute;
+      padding: 10px;
+      width: 100px;
+      top: 32px;
+      right: 10px;
+      img {
+        width: 32px;
+        height: 32px;
+      }
+      .group {
+        margin-bottom: 10px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        .text-link,
+        button {
+          cursor: default;
+        }
+        button {
+          margin-right: 10px;
+        }
+        p {
+          font-size: 12px;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+      .group:last-of-type .text-link {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .logo img {
+    height: 32px;
+    width: 108px;
+    margin-right: 40px;
+
+    @media (max-width: 1449px) {
+      height: 45px;
+      width: 167px;
+    }
+  }
+  .button-link {
+    display: block;
+    background-color: #e50914;
+    width: 84px;
+    height: fit-content;
+    color: white;
+    border: 0;
+    font-size: 15px;
+    border-radius: 3px;
+    padding: 8px 17px;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    &:hover {
+      background-color: #f40612;
+    }
+  }
+  .group {
+    display: flex;
+    align-items: center;
+  }
+  .text-link {
+    color: white;
+    text-decoration: none;
+    margin-right: 30px;
+    font-weight: normal;
+    cursor: pointer;
+
+    &:hover {
+      font-weight: bold;
+    }
+
+    &.active {
+      font-weight: 700;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

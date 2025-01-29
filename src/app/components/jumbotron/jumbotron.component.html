@@ -1,0 +1,11 @@
+<div class="item">
+  <div class="container" [ngClass]="{ reverse: jumbo.direction === 'row-reverse' }">
+    <div class="pane">
+      <h1 class="title">{{ jumbo.title }}</h1>
+      <h2 class="subtitle">{{ jumbo.subTitle }}</h2>
+    </div>
+    <div class="pane">
+      <img [src]="jumbo.image" [alt]="jumbo.alt" />
+    </div>
+  </div>
+</div>

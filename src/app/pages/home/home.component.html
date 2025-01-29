@@ -1,0 +1,13 @@
+<app-header>
+  <div class="feature">
+    <h1 class="title">Unlimited Films, TV Programmes and more.</h1>
+    <h2 class="subtitle">Watch anywhere. Cancel at any time.</h2>
+    <app-opt-form />
+  </div>
+</app-header>
+
+@for (jumbo of jumboData; track jumbo.id) {
+<app-jumbotron [jumbo]="jumbo" />
+}
+<app-faqs />
+<app-footer />

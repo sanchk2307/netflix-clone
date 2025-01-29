@@ -1,0 +1,28 @@
+<div class="container">
+  <h1 class="title">Sign In</h1>
+  @if (error) {
+  <div class="error">{{ error }}</div>
+  }
+  <form class="base" (ngSubmit)="handleSignIn()">
+    <input
+      name="email"
+      placeholder="Email address"
+      [(ngModel)]="emailAddress"
+    />
+    <input
+      name="password"
+      type="password"
+      autocomplete="off"
+      placeholder="Password"
+      [(ngModel)]="password"
+    />
+    <button type="submit" [disabled]="emailAddress === '' || password === ''">
+      Sign In
+    </button>
+  </form>
+  <p class="text">New to Netflix? <a class="signup" routerLink="/signup">Sign up now.</a></p>
+  <p class="text-small">
+    This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn
+    more.
+  </p>
+</div>

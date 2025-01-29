@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="title">Who's watching?</h1>
+  <ul>
+    <li class="item" (click)="onClickProfile()">
+      <img
+        [src]="
+          user?.photoURL
+            ? '/images/users/' + user.photoURL + '.png'
+            : '/images/misc/loading.gif'
+        "
+        alt="Profile photo"
+      />
+      <p class="name">{{ user.displayName }}</p>
+    </li>
+  </ul>
+</div>

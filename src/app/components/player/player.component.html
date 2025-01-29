@@ -1,0 +1,15 @@
+<div class="container">
+    @if (showPlayer) {
+        <div class="overlay" (click)="closePlayer()">
+            <div class="inner">
+                <video id="netflix-player" controls>
+                    <source src="/videos/bunny.mp4" type="video/mp4" />
+                </video>
+                <button class="close">
+                    <img src="/images/icons/close.png" alt="">
+                </button>
+            </div>
+        </div>
+    }
+    <button class="toggle" (click)="togglePlayer()">Play</button>
+</div>

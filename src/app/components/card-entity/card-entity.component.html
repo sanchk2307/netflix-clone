@@ -1,0 +1,46 @@
+<div class="entities">
+  @for (item of slideItem.data; track item.id) {
+  <div class="item" (click)="setCardItem(item)">
+    <img
+      [src]="
+        '/images/' +
+        category +
+        '/' +
+        item.genre +
+        '/' +
+        item.slug +
+        '/small.jpg'
+      "
+      alt="{{ item.title }}"
+    />
+    <div class="meta">
+      <p class="subtitle">{{ item.title }}</p>
+      <p class="text">{{ item.description }}</p>
+    </div>
+  </div>
+  }
+</div>
+@if (showFeature) {
+  <div class="feature" [style]="'background-image: url(/images/' +
+  category +
+  '/' +
+  itemFeature.genre +
+  '/' +
+  itemFeature.slug +
+  '/large.jpg)'">
+    <div class="content">
+      <p class="title">{{ itemFeature.title }}</p>
+      <p class="text">{{ itemFeature.description }}</p>
+      <button class="close" (click)="closeCard()">
+        <img src="/images/icons/close.png" alt="">
+      </button>
+      <div class="group">
+        <div class="maturity" [ngStyle]="{'background-color': itemFeature.maturity <= 15 ? 'red' : 'green'}">
+          {{ itemFeature.maturity < 12? 'PG' : itemFeature.maturity }}
+        </div>
+        <p class="text" style="font-weight: bold;">{{ itemFeature.genre }}</p>
+      </div>
+      <app-player></app-player>
+    </div>
+  </div>
+}

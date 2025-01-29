@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="inner">
+    <h1 class="title">Frequently Asked Questions</h1>
+    @for (faq of faqData; track faq.id) {
+    <div class="item">
+      <app-accordion>
+        <ng-container class="header">{{ faq.header }}</ng-container>
+        <ng-container class="body">{{ faq.body }}</ng-container>
+      </app-accordion>
+    </div>
+    }
+    <app-opt-form />
+  </div>
+</div>
