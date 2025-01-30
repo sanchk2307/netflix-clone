@@ -1,27 +1,88 @@
-# Netflix
+# Netflix Clone App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.7.
+A fully responsive Netflix clone built using Angular and Firebase, featuring user authentication, content browsing, and video playback.
 
-## Development server
+## Features 🌟
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- User Authentication (Sign up, Sign in, Sign out) using Firebase
+- Fetch and display movie and series data from Firestore
+- Fuzzy search functionality using Fuse.js
+- Responsive design for various screen sizes
+- Protected routes using Angular guards
+- Video playback support
 
-## Code scaffolding
+## Technologies Used 💻
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+| Technology       | Description                        |
+|------------------|------------------------------------|
+| Angular          | Frontend framework                 |
+| Firebase         | Authentication, Firestore, Hosting |
+| SCSS             | Styling                            |
+| Fuse.js          | Fuzzy search functionality         |
 
-## Build
+## Setup and Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#### Prerequisites
 
-## Running unit tests
+Make sure you have the following installed:
+- Node.js (LTS version recommended)
+- Angular CLI
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Follow these steps to set up the project locally:
 
-## Running end-to-end tests
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sanchk2307/netflix-clone.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd netflix-clone
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Firebase Configuration:
+   - Create a Firebase project at Firebase Console.
+   - Enable Authentication (Email/Password sign-in method).
+   - Create a Firestore database and add your movie/series collection. (Data seeding logic included in the service files)
+   - Get your Firebase config and add it to the service files
+5. Run the app:
+   ```bash
+   ng serve
+   ```
+6. Open the app in your browser:
+   ```
+   http://localhost:4200
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Usage 📖
 
-## Further help
+1. Sign up or log in with your credentials.
+2. Browse movies and TV shows.
+3. Search for content using the search bar.
+4. Click on a movie/series to play the video.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Contributing 🤝
+
+Contributions are welcome! To improve this project:
+1. Fork the repository.
+2. Create a new branch for your feature:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+4. Push the branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a pull request.
+
+## License
+
+This project is for educational purposes only and is not affiliated with Netflix.
+
+---
