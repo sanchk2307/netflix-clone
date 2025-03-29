@@ -10,6 +10,10 @@ A fully responsive Netflix clone built using Angular and Firebase, featuring use
 - Responsive design for various screen sizes
 - Protected routes using Angular guards
 - Video playback support
+<img width="1440" alt="Screenshot 2025-03-29 at 10 55 57 AM" src="https://github.com/user-attachments/assets/e12c005e-021c-4635-a28e-36d7f60e66e7" />
+<img width="1440" alt="Screenshot 2025-03-29 at 10 56 21 AM" src="https://github.com/user-attachments/assets/57327547-d681-4a4f-8910-1f96983f2901" />
+<img width="1440" alt="Screenshot 2025-03-29 at 10 54 50 AM" src="https://github.com/user-attachments/assets/72504042-98a0-4f8e-aeea-0563835b2689" />
+<img width="1440" alt="Screenshot 2025-03-29 at 10 55 23 AM" src="https://github.com/user-attachments/assets/37edf333-159b-4f58-b76e-03545e325d2b" />
 
 ## Technologies Used 💻
 
